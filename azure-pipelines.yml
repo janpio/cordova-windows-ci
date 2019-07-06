@@ -16,6 +16,10 @@ steps:
   displayName: 'npm install + cordova'
 
 - script: |
+    echo "execute msbuild"
+    "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\msbuild.exe" -version -nologo
+    echo "SET MSBUILDDIR"
     SET MSBUILDDIR="C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\"
-    cordova build windows
-  displayName: 'cordova build windows --verbose'
+    echo "cordova build windows"
+    cordova build windows --verbose
+  displayName: 'cordova build windows'
