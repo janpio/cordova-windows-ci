@@ -3,9 +3,7 @@ windows_container:
   os_version: 2019
 
 task:
-  node_modules_cache:
-    folder: node_modules
-    fingerprint_script: cat package-lock.json
-    populate_script: npm ci
-  install_script: npm install -g cordova
+  install_script: |
+    npm ci
+    npm install -g cordova
   build_script: cordova build windows
