@@ -17,4 +17,4 @@ steps:
 
 - script: |
     cordova build windows
-  displayName: 'cordova build windows -verbose'
+  displayName: 'cordova build windows --verbose'
