@@ -7,4 +7,4 @@ task:
     choco install nodejs
     npm ci
     npm install -g cordova
-  build_script: cordova build windows
+  build_script: cordova build windows -verbose
