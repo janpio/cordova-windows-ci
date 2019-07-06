@@ -4,6 +4,7 @@ windows_container:
 
 task:
   install_script: |
+    choco install visualstudio2017community --params "--add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.10240"
     choco install nodejs -y
     refreshenv
     npm ci
