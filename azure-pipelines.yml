@@ -21,6 +21,11 @@ steps:
   displayName: 'confirm msbuild'
 
 - script: |
+    cordova platform rm windows
+    cordova platform add https://github.com/apache/cordova-windows#janpio-admin
+  displayName: 'use cordova-windows branch'
+
+- script: |
     echo "SET MSBUILDDIR"
     SET MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\
     echo "cordova build windows"

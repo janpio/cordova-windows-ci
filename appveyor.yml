@@ -3,5 +3,7 @@ install:
 - npm install
 
 build_script:
+- cordova platform rm windows
+- cordova platform add https://github.com/apache/cordova-windows#janpio-admin
 - cordova build windows --verbose
 - cordova run windows --verbose
