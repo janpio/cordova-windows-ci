@@ -18,10 +18,19 @@ steps:
 - script: |
     echo "execute msbuild"
     "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\msbuild.exe" -version -nologo
+  displayName: 'confirm msbuild'
+
+- script: |
     echo "SET MSBUILDDIR"
     SET MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\
     echo "cordova build windows"
     cordova build windows --verbose
+  displayName: 'cordova build windows'
+
+- script: |
+    echo "SET MSBUILDDIR"
+    SET MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\
     echo "cordova run windows"
     cordova run windows --verbose
-  displayName: 'cordova build + run windows'
+  displayName: 'cordova run windows'
+
