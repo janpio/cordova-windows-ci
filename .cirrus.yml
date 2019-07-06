@@ -3,16 +3,16 @@ windows_container:
   os_version: 2019
 
 task:
+  msbuild_script: |
+    "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath
+    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild"
+    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0"
+
   install_script: |
     #choco install visualstudio2017community --params "--add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.10240 --no-includeRecommended" --force -y
     choco install nodejs -y
     refreshenv
     npm ci
-
-  msbuild_script: |
-    "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0"
 
   build_script: |
     npm install -g cordova # if done in install_script the command is not available in build_script
