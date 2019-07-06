@@ -5,6 +5,7 @@ windows_container:
 task:
   install_script: |
     choco install nodejs -y
+    refreshenv
     npm ci
     npm install -g cordova
   build_script: cordova build windows --verbose
