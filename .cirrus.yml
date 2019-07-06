@@ -10,6 +10,7 @@ task:
 
   msbuild_script: |
     "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath
+    dir C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools
 
   build_script: |
     npm install -g cordova # if done in install_script the command is not available in build_script
