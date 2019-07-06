@@ -33,6 +33,8 @@ steps:
 - script: |
     echo "SET MSBUILDDIR"
     SET MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\
+    echo "certutil.exe -addstore TrustedPeople"
+    certutil.exe -addstore TrustedPeople platforms/windows/CordovaApp_TemporaryKey.pfx
     echo "cordova run windows"
     cordova run windows --verbose
   displayName: 'cordova run windows'
