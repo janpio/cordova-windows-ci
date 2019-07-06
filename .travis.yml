@@ -7,11 +7,10 @@ install:
   - npm install
 
 before_script: 
-  - where msbuild
-  - IF NOT EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" ( echo "no vswhere" ) ELSE "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere" -property installationPath -products * -all"
-  - IF NOT EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" ( echo "no vswhere" ) ELSE "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere" -property installationPath -all"
-  - IF NOT EXIST "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe" ( echo "no vswhere" ) ELSE "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere" -property installationPath -legacy"
-  - export MSBUILDDIR="C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\"
+  - export PATH="$PATH:/c/Program Files (x86)/Microsoft Visual Studio/Installer/"
+  - export MSVC=$(vswhere -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath)
+  - export MSVC=$(echo /$MSVC | sed -e 's/\\/\//g' -e 's/://')
+  - export MSBUILDDIR="$MSVC/MSBuild/15.0/Bin/"
 
 script:
   - cordova build windows --verbose
