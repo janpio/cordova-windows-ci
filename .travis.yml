@@ -2,12 +2,12 @@ os: windows
 language: node_js
 node_js: 10
 
-env:
-  - MSBUILDDIR="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\"
-
 install:
   - npm install -g cordova
   - npm install
 
+before_script: 
+  - export MSBUILDDIR="C/Program Files (x86)/Microsoft Visual Studio/2017/BuildTools/MSBuild/15.0/Bin/"
+  
 script:
   - cordova build windows -verbose
