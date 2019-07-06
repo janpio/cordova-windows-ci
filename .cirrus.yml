@@ -4,7 +4,7 @@ windows_container:
 
 task:
   install_script: |
-    yes | choco install nodejs
+    choco install nodejs -y
     npm ci
     npm install -g cordova
   build_script: cordova build windows --verbose
