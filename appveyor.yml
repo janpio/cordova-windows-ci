@@ -4,3 +4,4 @@ install:
 
 build_script:
 - cordova build windows --verbose
+- cordova run windows --verbose

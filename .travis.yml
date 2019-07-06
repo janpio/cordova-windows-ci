@@ -14,3 +14,4 @@ before_script:
 
 script:
   - cordova build windows --verbose
+  - cordova run windows --verbose
