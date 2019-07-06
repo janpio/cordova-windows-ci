@@ -1,0 +1,10 @@
+os: windows
+language: node_js
+node_js: 10
+
+install:
+  - npm install -g cordova
+  - npm install
+
+script:
+  - cordova build windows
