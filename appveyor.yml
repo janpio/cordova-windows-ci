@@ -1,0 +1,6 @@
+install:
+- npm install -g cordova
+- npm install
+
+build_script:
+- cordova build windows
