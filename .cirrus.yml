@@ -9,8 +9,7 @@ task:
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0"
 
   install_script: |
-    #choco install visualstudio2017community --params "--add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.10240 --no-includeRecommended" --force -y
-    choco install nodejs -y
+    choco install nodejs -y #choco install visualstudio2017community --params "--add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.10240 --no-includeRecommended" --force -y
     refreshenv
     npm ci
 
