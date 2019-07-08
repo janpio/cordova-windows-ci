@@ -19,6 +19,6 @@ task:
     refreshenv
     npm ci
     npm install -g cordova
-    set MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin
+    set MSBUILDDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin
     cordova build windows --verbose
     cordova run windows --verbose
