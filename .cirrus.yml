@@ -1,5 +1,5 @@
 windows_container:
-  image: cirrusci/windowsservercore:cmake
+  image: cirrusci/windowsservercore:2019
   os_version: 2019
 
 task:
