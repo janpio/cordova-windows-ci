@@ -7,9 +7,9 @@ task:
     choco install visualstudio2017community --params "--add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.10240 --add Microsoft.VisualStudio.Workload.WebBuildTools" --force -y
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio\v15.0"
+    #dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft"
+    #dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio"
+    #dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio\v15.0"
 
   export_vsstudio_script: |
     "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vs_installer.exe" export --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community" --config "C:\.vsconfig"
