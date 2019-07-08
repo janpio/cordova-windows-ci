@@ -9,8 +9,8 @@ task:
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild"
 
   export_vsstudio_script: |
-    "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vs_installer.exe" export --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community" --config "C:\.vsconfig"
-    more "C:\.vsconfig"
+    "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vs_installer.exe" export --installPath "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community" --config .vsconfig
+    more .vsconfig
 
   msbuild_script: |
     "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath
