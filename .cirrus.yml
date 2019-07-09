@@ -5,8 +5,8 @@ windows_container:
 task:
   install_vsstudio_script: |
     choco install visualstudio2017community --package-parameters "--add Microsoft.VisualStudio.Workload.Universal --add Microsoft.VisualStudio.Component.Windows10SDK.10240 --add Microsoft.VisualStudio.Workload.WebBuildTools --add Microsoft.VisualStudio.Workload.NetCoreTools --add Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP" --force -y
-    choco install visualstudio2017-workload-universal
-    choco install visualstudio2017-workload-webcrossplat
+    choco install visualstudio2017-workload-universal -y
+    choco install visualstudio2017-workload-webcrossplat -y
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild"
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft"
