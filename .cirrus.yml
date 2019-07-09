@@ -8,12 +8,17 @@ task:
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild"
 
-
   msbuild_script: |
     "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -products "*" -requires Microsoft.Component.MSBuild -property installationPath
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild"
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0"
     dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin"
+
+  msbuild2_script: |
+    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\Microsoft\"
+    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\Microsoft\VisualStudio"
+    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\Microsoft\VisualStudio\v15.0"
+    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\Microsoft\VisualStudio\v15.0\JavaScript"
 
   foo_script: |
     choco install nodejs -y
