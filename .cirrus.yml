@@ -3,15 +3,9 @@ windows_container:
   os_version: 2019
 
 task:
-  install_vsstudio_script: |
+  install_vsstudio_workloads_script: |
     choco install visualstudio2017-workload-universal -y
     choco install visualstudio2017-workload-webcrossplat -y
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio\v15.0"
-    dir "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\Microsoft\VisualStudio\v15.0\JavaScript"
 
   foo_script: |
     choco install nodejs -y
